@@ -1,0 +1,376 @@
+@charset "utf-8";
+/* for mobile and all*/
+* {
+  box-sizing: border-box;
+}
+
+
+
+footer {
+  text-align: center;
+  background-color: black;
+  margin: 20px 0px;
+}
+
+small {
+  color: white;
+}
+
+a {
+  text-decoration: none;
+}
+
+.button {
+  font-size: 1.375rem;
+  background: deeppink;
+  color: snow;
+  border-radius: 5px;
+  text-decoration: none;
+  padding: 18px 32px;
+  display: flex;
+  justify-content: center;
+}
+
+.logo {
+  width: 100px;
+  margin-top: 1px;
+}
+
+ul {
+  list-style-type: none;
+  display: flex;
+}
+
+nav {
+  width: 35px;
+  height: 35px;
+  background-color: #999;
+  border-radius: 5px;
+  cursor: pointer;
+  position: fixed;
+  top: 10px;
+  right: 10px;
+}
+
+nav span,
+nav span::before,
+nav span::after {
+  width: 30px;
+  height: 3px;
+  background-color: #fff;
+  display: block;
+  content: "";
+  position: absolute;
+  top: 2.5px;
+  left: 2.5px;
+}
+
+nav span::before {
+  top: 13px;
+  left: 0;
+}
+
+nav span::after {
+  top: 26px;
+  left: 0;
+}
+
+#open-close {
+  display: none;
+}
+
+#menu {
+  margin-top: 35px;
+  list-style-type: none;
+  padding: 0 10px;
+  position: fixed;
+  right: -300px;
+  z-index: 999;
+}
+
+#open-close:checked ~ #menu {
+  transition: all 1500ms 0s linear;
+  transform: translate(-300px);
+}
+
+#open-close ~ #menu {
+  transition: all 1500ms 0s linear;
+  transform: translate(300px);
+}
+
+#menu a {
+  padding: 3px 10px;
+  display: block;
+  background-color: greenyellow;
+  color: #333;
+  text-align: center;
+  text-decoration: none;
+  border-bottom: 1px solid #999;
+}
+
+#menu a:hover {
+  background-color: teal;
+  color: #fff;
+}
+
+
+
+/*toppageページ*/
+.big-bg {
+  background-size: cover;
+  background-position: center top;
+}
+#home {
+  background-image: url("../images/jigazou.jpg");
+  min-height: 100vh;
+}
+
+/* #menu {
+  display: flex;
+  justify-content: flex-end;
+  font-size: 1.25rem;
+  text-transform: uppercase;
+  margin-top: 34px;
+  list-style: none;
+  margin-left: auto;
+  color: red;
+} */
+
+/* #menu li {
+  margin-left: 36px; */
+/* } */
+.contact {
+  color: red;
+}
+
+.work {
+  color: red;
+}
+
+/* .dessin {
+  color: red;
+} */
+
+.toppage-title {
+  color: crimson;
+  text-align: center;
+  font-size: 5rem;
+  margin-bottom: 1000px;;
+}
+
+.profile {
+  background-color: aliceblue;
+}
+
+#link-menu {
+  position: static;
+  display: flex;
+  visibility: visible;
+  padding: 0;
+  justify-content: space-around;;
+}
+
+#link-menu a {
+  padding: 3px 10px;
+  display: block;
+  background-color: deeppink;
+  color: #000;
+  text-align: center;
+  text-decoration: none;
+  list-style-type: none;
+}
+
+.work-botton {
+  color: red;
+}
+/*workページ*/
+.art {
+  background-color: beige;
+}
+
+.art-title{
+  color:cornflowerblue;
+  text-align: center;
+  border: 20px double mediumslateblue;
+}
+
+/* .flex {
+  display: flex;
+}
+
+.flex .image {
+  width: 700px;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  position: relative;
+}
+.flex .right {
+  margin: 0 0 0 20px;
+  padding: 0;
+}
+.flex .title {
+  margin: 0;
+  padding: 0;
+  font-weight: bold;
+  font-size: 18px;
+}
+.flex .text {
+  margin: 10px 0 0;
+  padding: 0;
+} */
+
+.buy {
+  display: inline-block;
+  margin: 0 10px;
+  
+}
+
+a.buy {
+  border: 3px solid;
+  border-radius: 10px;
+}
+
+.flex {
+  display: list-item;  /* 縦に並べる */
+  list-style-type: none;
+}
+/*accessページ*/
+.access {
+  background-color: mintcream;
+}
+
+.access-title {
+  color: mediumspringgreen;
+  text-align: center;
+  border: 5px solid mediumvioletred;
+}
+
+.member-register{
+  text-align: center;
+}
+.example {
+  margin: auto;
+}
+
+input[type="text"],
+input[type="tel"],
+input[type="email"]{
+  width: 100%;
+}
+
+textarea {
+  width: 100%;
+  resize: none;
+}
+
+/*dessinページ*/
+.dessin {
+  background-color: lightcyan;
+}
+
+.dessin-title {
+  color: mediumslateblue;
+  text-align: center;
+  border: 10px dotted aqua;
+}
+.container {
+  display: grid;
+  grid-template-columns: 1fr 1fr ;
+}
+
+/*buyページ*/
+ 
+
+.buy-title {
+text-align: center;
+}
+
+.buy-image {
+  text-align: center;
+}
+
+.buy-text {
+  text-align: center;
+}
+
+#buy {
+  background-image: radial-gradient(white,gold);
+  min-height: 100vh;
+}
+
+/*for tablet and pc*/
+@media (min-width: 600px) {
+  label[for="open-close"] {
+    visibility: hidden;
+  }
+
+  nav {
+    position: static;
+    width: 100%;
+    height: auto;
+    margin: 0;
+  }
+
+  nav span,
+  nav span::before,
+  nav span::after {
+  display: none;
+  }
+
+  #menu {
+    position: static;
+    display: flex;
+    visibility: visible;
+    padding: 0;
+    justify-content: space-around;
+  }
+
+  #menu li {
+    width: 33.3%;
+    border-top: 1px solid #999;
+    border-left: 1px solid #999;
+  }
+
+  #menu li:last-of-type {
+    border-right: 1px solid #999;
+  }
+
+  #open-close:checked ~ #menu {
+    transition: none;
+    transform: translate(0px);
+  }
+
+  #open-close ~ #menu {
+    transition: none;
+    transform: translate(0px);
+  }
+
+  .flex {
+    display: flex;
+  }
+  
+  .flex .image {
+    width: 700px;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    position: relative;
+  }
+  .flex .right {
+    margin: 0 0 0 20px;
+    padding: 0;
+  }
+  .flex .title {
+    margin: 0;
+    padding: 0;
+    font-weight: bold;
+    font-size: 18px;
+  }
+  .flex .text {
+    margin: 10px 0 0;
+    padding: 0;
+  }
+  
+  
+}
